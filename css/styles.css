@@ -1,0 +1,205 @@
+@charset "utf-8";
+/* custom css file made by JeanDoe */
+
+/* import Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* css variables */
+
+:root{
+	--main-clr: #567;
+/*	--light-bg: #e1d1f1;*/
+	--light-bg: #f1f1f1;
+	--light-clr: #7a7b7c;
+	--black: #1a1b1c;
+	--white: #fff;
+	
+	--body-font: 'Poppins','Ubuntu Mono', sans-serif;
+}
+
+/* initialisation */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+html{
+	font-size: 100%;
+}
+
+body{
+	background: var(--light-bg);
+	font-family: var(--body-font);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+main{
+	max-width: 1200px;
+	height: 100%;
+	width: 100%;
+}
+
+/* Header section starts */
+
+.header{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: 2rem;
+	max-width: 1200px;
+	padding: 1rem;
+	background: transparent;
+	margin: 0 auto;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+
+.header .logo{
+	font-size: 1.4rem;
+	letter-spacing: 1px;
+	font-weight: bold;
+	color: var(--black);
+}
+.header .logo span{
+	color: var(--main-clr);
+}
+.header .logo span:last-child{
+	font-size: 2rem;
+}
+
+.header .navbar{
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.header .navbar a{
+	text-transform: uppercase;
+	font-size: .938rem;
+	font-weight: 500;
+	color: var(--black);
+}
+
+.header .navbar a:hover{
+	color: var(--main-clr);
+}
+
+.header .icons{
+	display: inline-block;
+}
+
+.header .icons div{
+	background: var(--light-bg);
+	margin-left: .5rem;
+	padding: .7rem;
+	cursor: pointer;
+	border-radius: .25rem;
+	font-size: 1.2rem;
+}
+.header .icons div:hover{
+	background: var(--main-clr);
+	color: var(--light-bg);
+}
+
+#menu-btn{
+	display: none;
+}
+
+/* Home section sarts */
+
+.home{
+	height: 100%;
+	display: grid;
+	place-items: center;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 3rem;
+	overflow: hidden auto;
+	padding-bottom: 1.5rem;
+}
+
+.home .block-1{
+	background: var(--main-clr);
+		max-height: 600px;
+}
+.home .block-1 img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	max-height: 600px;
+	margin: 1rem;
+}
+.home .block-1{
+	width: 100%;
+}
+.home .block-2{
+	padding: 1rem;
+}
+.home .block-2 h2{
+	width: 100%;
+	color: var(--main-clr);
+	font-size: 2rem;
+	text-transform: capitalize;
+}
+
+.home .block-2 p{
+	color: var(--light-clr);
+}
+.home .block-2 span{
+	color: var(--black);
+	font-size: 2.3rem;
+	text-transform: uppercase;
+}
+.home .block-2 .btn{
+	display: inline-block;
+	padding: 1rem 2rem;
+	background: var(--main-clr);
+	margin-top: 2rem;
+	color: var(--white);
+	font-size: 1.5rem;
+	border-radius: .25rem;
+	text-transform: uppercase;
+}
+.home .block-2 .btn:hover{
+	background: #456;
+}
+
+@media screen and (max-width: 996px){
+	.header{
+		background: var(--white);
+	}
+	.header .navbar{
+		display: none;
+		
+	}
+	#menu-btn{
+		display: inline-block;
+	}
+	.home{
+		grid-template-columns: 1fr;
+	}
+	.home .block-1{
+		max-height: 600px;
+	}
+	.header .icons{
+		position: absolute;
+		top: 140%;
+	}
+}
+
+
+
+
+
+
